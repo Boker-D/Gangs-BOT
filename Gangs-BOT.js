@@ -1,3 +1,4 @@
+
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
@@ -18,6 +19,7 @@ client.on("message", message => {
 ....
 متعدد الميزات و الاوامر فيه اوامر جميله يحتوي هذا البوت على
 
+مرفوع ع خادم 24 ساعة
 -:rocket: سرعه اتصال ممتازه
 -:sunglasses: سهل الاستخدام 
 -:warning: صيانه كل يوم
