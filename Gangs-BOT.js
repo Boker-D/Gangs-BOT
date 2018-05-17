@@ -991,7 +991,7 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '.';
+var prefix = ".";
 const discord_token = "NDQ1MjkwMjU1NTcxMjIyNTI4.DdoUZw.19HIwkNvVXhEx7nCrNVvuboFdSY";
 client.login(discord_token);
 client.on('ready', function() {
