@@ -68,7 +68,7 @@ client.on("message", message => {
 『.لعبه اسئله / كت تويت』
 **
 
-        ***__🎼 اوامر الموسيقى__***
+        ***__🎼قريبا:اوامر الموسيقى__***
 **
 『.play / لتشغيل اغنية』
 『.stop / لأيقاف الاغنية بشكل كامل』
@@ -992,7 +992,7 @@ const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
 const prefix = '.';
-const discord_token = "(process.env.BOT_TOKEN);";
+const discord_token = "NDQ1MjkwMjU1NTcxMjIyNTI4.DdoUZw.19HIwkNvVXhEx7nCrNVvuboFdSY";
 client.login(discord_token);
 client.on('ready', function() {
 	console.log(`i am ready ${client.user.username}`);
