@@ -1,28 +1,10 @@
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.on("ready", () => {
-console.log('By : Boker');
-console.log('ready');
-client.user.setPresence({
-  status: 'dnd',
-  game: { 
-     type: 0,
-     name: '•●{رَمِضّاِنُ كـــًرًيَـــمً ~☾',
-     details: `للهم أختم بالصالحات أعمالنا`,
-     url: 'http://twitch.tv/M7md_Salih',
-     state: `في ڪڸ سن? هنآڪ شهر يجعڸني أإڪثر قرباً من ربي {شهر رمضآن}`,
-    application_id: '394600839496466443',
-     assets: {
-        small_image: `444859352093032449`,
-        small_text: '2018',
-        large_image: `444864778465181706`,
-        large_text: `Ramadan Mubarak` }
-
-  }
-    });
+client.on('ready', () => {
+  client.user.setGame(` By Boker #8956 .`,'https://www.twitch.tv/Gangs');
   console.log('---------------');
-  console.log('Gangs Is Online')
+  console.log('Gangs-BOT Is Online')
   console.log('---------------')
 });
 client.on("message", message => {
@@ -12210,26 +12192,18 @@ client.on('message', message => {
 message.channel.sendEmbed(embed);
     }
 });
-client.on("ready", () => {
-console.log('By : Boker');
-console.log('ready');
-client.user.setPresence({
-  status: 'dnd',
-  game: { 
-     type: 0,
-     name: '•●{رَمِضّاِنُ كـــًرًيَـــمً ~☾',Prefix .help
-     details: `للهم أختم بالصالحات أعمالنا`,
-     url: 'http://twitch.tv/M7md_Salih',
-     state: `في ڪڸ سن? هنآڪ شهر يجعڸني أإڪثر قرباً من ربي {شهر رمضآن}`,
-    application_id: '394600839496466443',
-     assets: {
-        small_image: `444859352093032449`,
-        small_text: '2018',
-        large_image: `444864778465181706`,
-        large_text: `Ramadan Mubarak` }
-
-  }
-    });
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`Gangs BOT- Script By : Boker`);
+        console.log(`----------------`);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : Boker ' `);
+    console.log(`----------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+client.user.setGame(` ON ${client.guilds.size} Servers - Prefix .help رمضان كريم`,"http://twitch.tv/Gangs")
+client.user.setStatus("dnd")
+});
+client.on("guildCreate", guild => {
+  console.log(` Join Bot Of Server ${guild.name} Owner Of Server ${guild.owner.user.username}!`)
 });
 const secreT = [
   "**الحياة بكل ما فيها تقف دائمًا على حد الوسطية بين اتزان المعنى وضده من حب وكره وحق وباطل وعدل وظلم**.",
