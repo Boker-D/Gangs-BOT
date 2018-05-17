@@ -1,8 +1,26 @@
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
-client.on('ready', () => {
-  client.user.setGame(` By Boker #8956 .`,'http://twitch.tv/Palestine');
+client.on("ready", () => {
+console.log('By : Boker');
+console.log('ready');
+client.user.setPresence({
+  status: 'dnd',
+  game: { 
+     type: 0,
+     name: '•●{رَمِضّاِنُ كـــًرًيَـــمً ~☾',
+     details: `للهم أختم بالصالحات أعمالنا`,
+     url: 'http://twitch.tv/M7md_Salih',
+     state: `في ڪڸ سن? هنآڪ شهر يجعڸني أإڪثر قرباً من ربي {شهر رمضآن}`,
+    application_id: '394600839496466443',
+     assets: {
+        small_image: `444859352093032449`,
+        small_text: '2018',
+        large_image: `444864778465181706`,
+        large_text: `Ramadan Mubarak` }
+
+  }
+    });
   console.log('---------------');
   console.log('Gangs Is Online')
   console.log('---------------')
