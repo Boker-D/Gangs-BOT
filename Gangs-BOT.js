@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   client.user.setGame(` By Boker #8956 .`,'https://www.twitch.tv/Gangs');
   console.log('---------------');
-  console.log('Gangs-BOT Is Online')
+  console.log('Rd-BOT Is Online')
   console.log('---------------')
 });
 client.on("message", message => {
@@ -184,7 +184,7 @@ client.on("message", message => {
         color: 0x06DF00,
         description: "تم مسح الرسائل بنجاح",
         footer: {
-          text: "Gangs-BOT"
+          text: "Rd-BOT"
         }
       }}).then(msg => {msg.delete(3000)});
                           }
@@ -428,7 +428,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter("**Gangs-BOT**")
+     .setFooter("Rd-BOT")
         .setTimestamp()
    
       channel.sendEmbed(embed);
@@ -872,7 +872,7 @@ if(message.content.split(' ')[0] == '.bc') {
   .setThumbnail(message.author.avatarURL)  
   .setAuthor(message.author.username)
 .setDescription("معلومات عن الحــساب")
-               .setFooter(`Gangs-BOT.`, '')
+               .setFooter(`Rd-BOT.`, '')
   .setColor("#9B59B6")
   .addField("اســـم الحســاب", `${message.author.username}`)
   .addField('كود الحساب الخاص', message.author.discriminator)
@@ -921,7 +921,7 @@ message.channel.sendEmbed(embed);
 });
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Gangs BOT- Script By : Boker`);
+      console.log(`Rd BOT- Script By : Boker`);
         console.log(`----------------`);
       console.log(`ON ${client.guilds.size} Servers '     Script By : Boker ' `);
     console.log(`----------------`);
