@@ -12210,18 +12210,26 @@ client.on('message', message => {
 message.channel.sendEmbed(embed);
     }
 });
-client.on('ready', () => {
-   console.log(`----------------`);
-      console.log(`Gangs- Script By : Boker`);
-        console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : Boker ' `);
-    console.log(`----------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` ON ${client.guilds.size} Servers - Prefix .help`,"http://twitch.tv/S-F")
-client.user.setStatus("dnd")
-});
-client.on("guildCreate", guild => {
-  console.log(` Join Bot Of Server ${guild.name} Owner Of Server ${guild.owner.user.username}!`)
+client.on("ready", () => {
+console.log('By : Boker');
+console.log('ready');
+client.user.setPresence({
+  status: 'dnd',
+  game: { 
+     type: 0,
+     name: '•●{رَمِضّاِنُ كـــًرًيَـــمً ~☾',Prefix .help
+     details: `للهم أختم بالصالحات أعمالنا`,
+     url: 'http://twitch.tv/M7md_Salih',
+     state: `في ڪڸ سن? هنآڪ شهر يجعڸني أإڪثر قرباً من ربي {شهر رمضآن}`,
+    application_id: '394600839496466443',
+     assets: {
+        small_image: `444859352093032449`,
+        small_text: '2018',
+        large_image: `444864778465181706`,
+        large_text: `Ramadan Mubarak` }
+
+  }
+    });
 });
 const secreT = [
   "**الحياة بكل ما فيها تقف دائمًا على حد الوسطية بين اتزان المعنى وضده من حب وكره وحق وباطل وعدل وظلم**.",
