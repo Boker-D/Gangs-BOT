@@ -870,6 +870,14 @@ if (message.content.startsWith(prefix + "uptime")) {
     seconds = seconds > 9 ? seconds : '0' + seconds
     return `${days > 0 ? `${days}:` : ''}${(hours || days) > 0 ? `${hours}:` : ''}${minutes}:${seconds}`
 };
+client.on('message', msg => {
+if (msg.content.includes('ترحيب')) {
+msg.reply(`**𝓦𝓔𝓛𝓒𝓞𝓜𝓔**
+
+منٌوِر بّيّنٌ ٱخٌوِٱنٌك ٱتُمنٌٱ تُقَضيّ ٱجَمل ٱلٱوِقَٱتُ معنٌٱ :kiss: :rose:
+`)
+}
+});
 client.on('ready',  () => {
   console.log('By : Boker');
   console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
