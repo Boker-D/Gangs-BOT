@@ -966,7 +966,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : Boker ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(` ON ${client.guilds.size} Servers - Prefix .help رمضان كريم`,"http://twitch.tv/Gangs")
+	Prefix .help رمضان كريم`,"http://twitch.tv/RD")
 client.user.setStatus("dnd")
 });
 client.on("guildCreate", guild => {
