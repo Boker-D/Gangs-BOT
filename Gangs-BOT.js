@@ -37,6 +37,7 @@ client.on("message", message => {
 『.dt / يعرض الوقت في الامارات و مكه المكرمه و مصر و التاريخ』
 『.level / لمعرفة لفلك』
 『.points / لمعرفة نقاطك』
+『.sg / لأقتراح』
 **
 
         ***__🤖 اوامر البوت__***
@@ -58,6 +59,7 @@ client.on("message", message => {
 『.bc /برودكاست』
 『.clear /لمسح الشات』
 『chat /لتفعيل الترحيب يجب عمل شات بأسم』
+『suggest /لتفعيل الاقتراحات يجب عمل شات بأسم』
 **
 
        ***__🎮 العاب__***
@@ -921,6 +923,57 @@ client.on("message", message => {
       message.reply(`you currently have ${row.points} points, good going!`);
     });
   }
+});
+var prefix = ".";
+ client.on('message', message => {
+if(message.content.startsWith(prefix +'sg')) {
+      const A8tra7Room = message.guild.channels.find("name", "suggest")
+      if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات :x:`);
+   let a8tra7 = message.content.split(" ").slice(1);
+   var m8tr7 = message.author.id
+if(!message.guild.channels.find("name","suggest")) return message.channel.send('لايوجد روم اقتراح \`suggest\`')
+var Eror = new Discord.RichEmbed()
+   .setTimestamp()
+   .setDescription(`الرجاء كتابت إقتراحك بعد الأمر `)
+   if(!a8tra7.join(" ")) return message.channel.send(Eror).then(message => {message.delete(50000)});
+   var ThxForSug = new Discord.RichEmbed()
+   .setTitle(`:white_check_mark: Success!`)
+   .setTimestamp()
+   .setDescription(`شكراً على اقتراحك !`)
+.addField(`إقتراحك : `, a8tra7)
+   var Sure = new Discord.RichEmbed()
+   .setTimestamp()
+   .setDescription(`هل انت متأكد من ارسال الاقتراح؟ معك دقيقه قبل الالغاء`)
+.addField(`المحتوى : `, a8tra7)
+message.channel.sendEmbed(Sure).then(msg => {
+    msg.react('❎')
+.then(() => msg.react('✅'))
+ 
+let YesFilter = (reaction, user) => reaction.emoji.name === '✅'  && user.id === message.author.id;
+let NoFilter = (reaction, user) => reaction.emoji.name === '❎' && user.id === message.author.id;
+ 
+let Yes = msg.createReactionCollector(YesFilter, { time: 60000 });
+let No = msg.createReactionCollector(NoFilter, { time: 60000 });
+ 
+Yes.on("collect", r => {
+   var ala8tra7 = new Discord.RichEmbed()
+   .setTimestamp()
+   .setColor('RANDOM')
+   .setThumbnail(message.author.avatarURL)
+   .setFooter(`${message.author.username}#${message.author.discriminator}`)
+   .setTitle(`الاقتراح ⤵`)
+   .setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&permissions=21469585838&scope=bot`)
+   .setDescription(`|~~>~~ ${a8tra7} ~~<~~|\n    المقترح : __<@${m8tr7}>__`)
+   A8tra7Room.send(ala8tra7)
+   message.channel.sendEmbed(ThxForSug).then(message => {message.delete(2000)})
+msg.delete();
+})
+No.on("collect", r => {
+message.channel.send('تم الغاء اقتراحط بنجاح :white_check_mark: ').then(message => {message.delete(2000)})
+msg.delete();
+})
+})
+}
 });
 client.on('ready',  () => {
   console.log('By : Boker');
