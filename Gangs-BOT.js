@@ -13,7 +13,13 @@ client.on("message", message => {
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-
+```
+  ____     _       ____        _   
+ |  _ \ __| |     | __ )  ___ | |_ 
+ | |_) / _` |_____|  _ \ / _ \| __|
+ |  _ < (_| |_____| |_) | (_) | |_ 
+ |_| \_\__,_|     |____/ \___/ \__|
+                                   ```
 ***__وصف عن البوت__***
 **
 ....
