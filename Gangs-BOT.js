@@ -1,3 +1,4 @@
+const figlet = require('figlet');
 const sql = require("sqlite");
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -925,7 +926,6 @@ client.on("message", message => {
     });
   }
 });
-const figlet = require('figlet');
 client.on('message', message => {
 if (message.content.startsWith(prefix + 'tag')) {
     let args = message.content.split(" ").slice(1);
