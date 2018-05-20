@@ -880,7 +880,7 @@ msg.reply(`**𝓦𝓔𝓛𝓒𝓞𝓜𝓔**
 });
 sql.open("./score.sqlite");
 
-const prefix = ".";
+
 client.on("message", message => {
   if (message.author.bot) return;
   if (message.channel.type !== "text") return;
