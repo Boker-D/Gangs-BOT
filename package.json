@@ -46,7 +46,7 @@
       "child_process": "1.0.2",
       "random-number": "0.0.9",
       "ytdl-core": "0.20.2",
-      "figlet": "1.2.0",
+      "figlet": "1.2.0"
     }
   }
   
