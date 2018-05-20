@@ -37,6 +37,7 @@ client.on("message", message => {
 『.dt / يعرض الوقت في الامارات و مكه المكرمه و مصر و التاريخ』
 『.level / لمعرفة لفلك』
 『.points / لمعرفة نقاطك』
+『.tag / لزخرفة الكلمات او الجمل بشكل حلو』
 **
 
         ***__🤖 اوامر البوت__***
@@ -923,6 +924,17 @@ client.on("message", message => {
       message.reply(`you currently have ${row.points} points, good going!`);
     });
   }
+});
+const figlet = require('figlet');
+client.on('message', message => {
+if (message.content.startsWith(prefix + 'tag')) {
+    let args = message.content.split(" ").slice(1);
+if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');  
+
+    figlet(args.join(" "), (err, data) => {
+              message.channel.send("```" + data + "```")
+           })
+}
 });
 client.on('ready',  () => {
   console.log('By : Boker');
