@@ -38,6 +38,7 @@ client.on("message", message => {
 『.level / لمعرفة لفلك』
 『.points / لمعرفة نقاطك』
 『.sg / لأقتراح』
+『.report / لأبلاغ على احد』
 **
 
         ***__🤖 اوامر البوت__***
@@ -60,6 +61,7 @@ client.on("message", message => {
 『.clear /لمسح الشات』
 『chat /لتفعيل الترحيب يجب عمل شات بأسم』
 『suggest /لتفعيل الاقتراحات يجب عمل شات بأسم』
+『report /لتفعيل الابلاغات يجب عمل شات بأسم』
 **
 
        ***__🎮 العاب__***
@@ -975,6 +977,25 @@ msg.delete();
 })
 }
 });
+client.on('message', msg => { 
+if (msg.content.startsWith(`.report`)) {
+
+   let args = msg.content.split(" ").slice(1);
+
+  if (!msg.mentions.members.first()) return msg.reply(`منشن شخص`)
+
+  if (!args[1]) return msg.reply(`ما هو البلاغ ؟؟`)
+
+  if (msg.guild.channels.find('name', 'report')) {
+
+    msg.guild.channels.find('name', 'report').send(`
+  تبليغ على : ${msg.mentions.members.first()}
+  بلغ عليه من قبل : ${msg.member}
+  السبب : **${args.join(" ").split(msg.mentions.members.first()).slice(' ')}**
+  `)
+  }
+}
+})
 client.on('ready',  () => {
   console.log('By : Boker');
   console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
