@@ -1023,7 +1023,7 @@ if (message.content.startsWith(".profile")) { // الامر
       fs.writeFile(`image.png`, buf)
      
         message.channel.send("", {
-          file: `image.png`
+          file: `https://i.imgur.com/UVI2Ckn.jpg`
         })
       })
     }, 1000)
