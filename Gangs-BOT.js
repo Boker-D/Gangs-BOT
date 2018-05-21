@@ -960,7 +960,7 @@ if (message.content.startsWith(".profile")) { // الامر
    
                       
 
-    fs.readFile(__dirname + '/images_profile/profile.png', function(err, picture) { //مكان الصوره
+    fs.readFile(__dirname + 'C:\Program Files (x86)\واو', function(err, picture) { //مكان الصوره
       if (err) throw err
       var img = new Image
                 var url = message.author.avatarURL; //افتار صورتك
@@ -1023,7 +1023,7 @@ if (message.content.startsWith(".profile")) { // الامر
       fs.writeFile(`image.png`, buf)
      
         message.channel.send("", {
-          file: `https://i.imgur.com/UVI2Ckn.jpg`
+          file: `image.png`
         })
       })
     }, 1000)
