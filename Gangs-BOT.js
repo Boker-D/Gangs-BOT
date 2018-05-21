@@ -935,8 +935,6 @@ if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');
            })
 }
 });
-const Discord = require("discord.js"); // بكج
-const bot = new Discord.Client({disableEveryone: true});
 const Canvas = require('canvas') // بكج
 const fs = module.require("fs"); //بكج
 const r1 = require('snekfetch'); //بكج
