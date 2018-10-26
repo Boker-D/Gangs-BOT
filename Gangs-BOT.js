@@ -1015,6 +1015,25 @@ client.on('message', message => {
 message.channel.sendEmbed(embed);
     }
 });
+const developers = ["331975722283302912"]
+const adminprefix = ".";
+bot.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'ply')) {
+    bot.user.setGame(argresult);
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'setname')) {
+  bot.user.setUsername(argresult).then
+      message.channel.send(`Changing The Name To ..**${argresult}** `)
+} else
+if (message.content.startsWith(adminprefix + 'setavatar')) {
+  bot.user.setAvatar(argresult);
+    message.channel.send(`Changing The Avatar To :**${argresult}** `);
+}
+});
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Rd BOT- Script By : Boker`);
