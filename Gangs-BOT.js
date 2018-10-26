@@ -3,9 +3,9 @@ const sql = require("sqlite");
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
-  client.user.setGame(` By Boker #8956 .`,'https://www.twitch.tv/Gangs');
+  client.user.setGame(` By Akash .`,'https://www.twitch.tv/Gangs');
   console.log('---------------');
-  console.log('Rd-BOT Is Online')
+  console.log('TB Is Online')
   console.log('---------------')
 });
 client.on("message", message => {
@@ -88,7 +88,7 @@ client.on('message', message => {
 if (message.content === '.help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("** مبرمج البوت :wrench: **","**@!      ʙɵᴋᴇʀ ☕🇵🇸#8956  **")
+      .addField("** مبرمج البوت :wrench: **","**@!      Akash ☕🇵🇸  **")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -1022,7 +1022,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : Boker ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(` Prefix .help رمضان كريم`,"http://twitch.tv/RD")
+  client.user.setGame(`.help | TB_THE_BEST`,"http://twitch.tv/TB")
 client.user.setStatus("dnd")
 });
 client.on("guildCreate", guild => {
