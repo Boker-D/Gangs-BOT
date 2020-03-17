@@ -3,9 +3,9 @@ const sql = require("sqlite");
 const Discord = require("discord.js");
 const client = new Discord.Client();
 client.on('ready', () => {
-  client.user.setGame(` By Akash .`,'https://www.twitch.tv/Gangs');
+  client.user.setGame(` By Darwin .`,'https://www.twitch.tv/Gangs');
   console.log('---------------');
-  console.log('TB Is Online')
+  console.log('FT Is Online')
   console.log('---------------')
 });
 client.on("message", message => {
@@ -88,7 +88,7 @@ client.on('message', message => {
 if (message.content === '.help') {
          let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)    
-      .addField("** مبرمج البوت :wrench: **","**@!      Akash ☕🇵🇸  **")
+      .addField("** مبرمج البوت :wrench: **","**@Darwin#5551**")
 .setColor('RANDOM')
   message.author.sendEmbed(embed);
     }
@@ -892,7 +892,7 @@ if(!args[0]) return message.reply('مرجو كتابة نص الدي تريد');
 }
 });
 client.on('ready',  () => {
-  console.log('By : Boker');
+  console.log('By : Darwin');
   console.log(`Logged in as * [ " ${client.user.username} " ] servers! [ " ${client.guilds.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] Users! [ " ${client.users.size} " ]`);
   console.log(`Logged in as * [ " ${client.user.username} " ] channels! [ " ${client.channels.size} " ]`);
@@ -972,7 +972,7 @@ client.on('message', message => {
 message.channel.sendEmbed(embed);
     }
 });
-const developers = ["331975722283302912"]
+const developers = ["570329820785934348"]
 const adminprefix = ".";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
